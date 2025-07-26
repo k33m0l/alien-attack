@@ -1,8 +1,7 @@
-[gd_scene load_steps=4 format=3 uid="uid://c35qm8uqe744l"]
+[gd_scene load_steps=3 format=3 uid="uid://c35qm8uqe744l"]
 
 [ext_resource type="Texture2D" uid="uid://daxawlhuhjiyo" path="res://assets/alien_attack_assets/textures/bg.png" id="1_uwrxv"]
 [ext_resource type="PackedScene" uid="uid://cf0pt4vmykdx4" path="res://scenes/player.tscn" id="2_yqjtg"]
-[ext_resource type="PackedScene" uid="uid://bntvwx3rpy6jq" path="res://scenes/rocket.tscn" id="3_lnu2h"]
 
 [node name="Game" type="Node2D"]
 
@@ -14,6 +13,3 @@ stretch_mode = 1
 
 [node name="Player" parent="." instance=ExtResource("2_yqjtg")]
 position = Vector2(161, 371)
-
-[node name="Rocket" parent="." instance=ExtResource("3_lnu2h")]
-position = Vector2(233, 372)
