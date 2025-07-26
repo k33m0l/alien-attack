@@ -11,5 +11,6 @@ config_version=5
 [application]
 
 config/name="Alient Attack"
+run/main_scene="uid://c35qm8uqe744l"
 config/features=PackedStringArray("4.4", "Forward Plus")
 config/icon="res://icon.svg"
