@@ -1,8 +1,6 @@
 extends CharacterBody2D
 
 var speed = 300
-var left_border = 0
-var upper_border = 0
 
 func _physics_process(_delta: float) -> void:
 	move_player()
@@ -10,17 +8,9 @@ func _physics_process(_delta: float) -> void:
 
 
 func limit_to_arena() -> void:
-	var right_border = get_viewport_rect().size.x
-	var lower_border = get_viewport_rect().size.y
-	if global_position.x < left_border:
-		global_position.x = left_border
-	elif global_position.x > right_border:
-		global_position.x = right_border
-	
-	if global_position.y < upper_border:
-		global_position.y = upper_border
-	elif global_position.y > lower_border:
-		global_position.y = lower_border
+	var screen_size = get_viewport_rect().size
+	global_position.x = clampf(global_position.x, 0, screen_size.x)
+	global_position.y = clampf(global_position.y, 0, screen_size.y)
 
 
 func move_player() -> void:
