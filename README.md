@@ -1,2 +1,2 @@
 # alien-attack
-https://www.gamedev.tv/courses/godot-complete-2d
+Is a Godot learning project, more at https://www.gamedev.tv/courses/godot-complete-2d
