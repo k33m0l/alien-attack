@@ -5,7 +5,7 @@
 [node name="EnemySpawner" type="Node2D"]
 script = ExtResource("1_ks1gq")
 
-[node name="Timer" type="Timer" parent="."]
+[node name="EnemyTimer" type="Timer" parent="."]
 wait_time = 2.0
 autostart = true
 
@@ -26,4 +26,9 @@ position = Vector2(1344, 476)
 [node name="SpawnPos_05" type="Marker2D" parent="SpawnPos"]
 position = Vector2(1339, 623)
 
-[connection signal="timeout" from="Timer" to="." method="_on_timer_timeout"]
+[node name="PathEnemyTimer" type="Timer" parent="."]
+wait_time = 3.0
+autostart = true
+
+[connection signal="timeout" from="EnemyTimer" to="." method="_on_timer_timeout"]
+[connection signal="timeout" from="PathEnemyTimer" to="." method="_on_path_enemy_timer_timeout"]
