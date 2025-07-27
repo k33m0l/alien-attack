@@ -11,7 +11,6 @@ func die() -> void:
 	emit_signal('died')
 	queue_free()
 
-
 func _on_body_entered(body: Node2D) -> void:
 	body.damage()
 	die()
