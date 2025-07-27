@@ -13,6 +13,8 @@ radius = 48.1664
 [node name="Enemy" type="Area2D"]
 rotation = -1.5708
 scale = Vector2(0.25, 0.25)
+collision_layer = 2
+collision_mask = 4
 script = ExtResource("1_md0e3")
 speed = 200
 

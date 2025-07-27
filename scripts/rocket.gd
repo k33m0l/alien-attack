@@ -7,4 +7,9 @@ func _physics_process(delta: float) -> void:
 
 
 func _on_visible_notifier_screen_exited() -> void:
-	queue_free() #Delete node
+	queue_free()
+
+
+func _on_area_entered(target_area: Area2D) -> void:
+	queue_free()
+	target_area.die()
