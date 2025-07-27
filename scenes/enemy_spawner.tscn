@@ -26,6 +26,4 @@ position = Vector2(1344, 476)
 [node name="SpawnPos_05" type="Marker2D" parent="SpawnPos"]
 position = Vector2(1339, 623)
 
-[node name="EnemyContainer" type="Node" parent="."]
-
 [connection signal="timeout" from="Timer" to="." method="_on_timer_timeout"]

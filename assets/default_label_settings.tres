@@ -1,0 +1,7 @@
+[gd_resource type="LabelSettings" load_steps=2 format=3 uid="uid://b8twvi4bo8ewy"]
+
+[ext_resource type="FontFile" uid="uid://ma1b41p02t1u" path="res://assets/alien_attack_assets/font/Kenney Blocks.ttf" id="1_cag7l"]
+
+[resource]
+font = ExtResource("1_cag7l")
+font_size = 48

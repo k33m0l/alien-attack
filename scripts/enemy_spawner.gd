@@ -1,7 +1,8 @@
 extends Node2D
 
+signal enemy_spawned(enemy_instance)
+
 @onready var enemy_scene: PackedScene = preload("res://scenes/enemy.tscn")
-@onready var enemy_container: Node = $EnemyContainer
 @onready var spawn_positions: Node2D = $SpawnPos
 
 func _on_timer_timeout() -> void:
@@ -12,4 +13,4 @@ func spawn_enemy() -> void:
 	
 	var enemy_instance: Area2D = enemy_scene.instantiate()
 	enemy_instance.global_position = spawn_pos_random.global_position
-	enemy_container.add_child(enemy_instance)
+	emit_signal('enemy_spawned', enemy_instance)
